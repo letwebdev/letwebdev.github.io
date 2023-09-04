@@ -2,27 +2,26 @@
 import { RouterLink, RouterView } from 'vue-router'
 import { reactive } from 'vue'
 import { ref } from 'vue'
-import { computed } from 'vue'
 
-function clearLocalStorage(){
-localStorage.clear()
+function clearLocalStorage() {
+  localStorage.clear()
 }
 </script>
 
 <template>
   <header>
     <div class="wrapper">
-
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-	<button @click="clearLocalStorage()"  >clear local storage</button>
+        <RouterLink to="/hackernews">Hacker News</RouterLink>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <button @click="clearLocalStorage()">clear local storage</button>
       </nav>
     </div>
   </header>
@@ -68,7 +67,7 @@ nav a:first-of-type {
 
 @media (min-width: 100px) {
   nav {
-	  font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 1024px) {
