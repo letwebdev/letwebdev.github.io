@@ -20,13 +20,23 @@ function store() {
 </script>
 
 <template>
+  <br />
+  <center class="links">
+    <button
+      @click="
+        like()
+        store()
+      "
+      :style="{ color }"
+    >
+      👍like: {{ countOfLike }}
+    </button>
     <br />
-    <center class="links">
-      <button @click="like() ;store()" :style="{ color }" > 👍like: {{ countOfLike }}</button >
-      <br />
-      <br />
+    <br />
+    <address>
       <a href="https://github.com/letwebdev" target="_blank" rel="noopener">GitHub profile</a>
-    </center>
+    </address>
+  </center>
 </template>
 <style scoped>
 .links {
